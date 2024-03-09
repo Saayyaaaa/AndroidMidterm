@@ -14,6 +14,8 @@ class OfferListAdapter : RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
     fun setItems(offerList: List<Offer>) {
         items.clear()
         items.addAll(offerList)
+
+
         notifyDataSetChanged()
 
         /**
@@ -33,6 +35,10 @@ class OfferListAdapter : RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    fun getItems(): List<Offer> {
+        return items
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
